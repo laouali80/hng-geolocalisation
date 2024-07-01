@@ -7,6 +7,9 @@ load_dotenv()
 
 app = FastAPI()
 
+@app.get('/')
+async def welcome():
+    return {"response": "succes"}
 
 @app.get('/api/hello')
 async def test(visitor_name: str = "Mark"):

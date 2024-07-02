@@ -22,6 +22,5 @@ async def test(visitor_name: str = "Mark"):
 
     return {"client_id": ipAddress,
             "location": response["city"],
-            "greeting": f"Hello, {visitor_name.title()}!",
-            "Temperature": f"{temp["main"]["temp"]} °C"
+            "greeting": f"Hello, {visitor_name.title()}!, the temperature is {temp["main"]["temp"]} degrees Celcius in {response["city"]}"
             }
